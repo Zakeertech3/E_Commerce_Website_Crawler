@@ -13,8 +13,8 @@ if st.button("🚀 Start Crawling"):
     start_time = time.time()
     progress_bar = st.progress(0)
     status_text = st.empty()
-    fetched_urls_table = st.empty()  # Placeholder for live updates of fetched URLs
-    live_log = st.empty()  # Placeholder for live log updates
+    fetched_urls_table = st.empty()  
+    live_log = st.empty()  
     
     with st.spinner("Crawling in progress... Please wait."):
         try:
@@ -22,19 +22,16 @@ if st.button("🚀 Start Crawling"):
                 crawler_output = {}
                 total_domains = len(DOMAINS)
                 completed_domains = 0
-                
-                # Use async for to iterate over the async generator
+            
                 async for domain, urls in run_crawler():
                     completed_domains += 1
                     crawler_output[domain] = urls
                     progress_bar.progress(completed_domains / total_domains)
                     status_text.write(f"Fetched {len(urls)} URLs from {domain}")
                     
-                    # Update the live table with fetched URLs
                     fetched_urls_table.write(f"### Fetched URLs for {domain}")
                     fetched_urls_table.table({"URLs": urls})
                     
-                    # Update the live log
                     live_log.write(f"**Log:** Completed {completed_domains}/{total_domains} domains.")
                 
                 return crawler_output

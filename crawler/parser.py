@@ -16,7 +16,7 @@ def extract_product_urls(html, base_url):
         r"/p/",
         r"/shop/",
         r"/sku/",
-        r"/catalog/"  # Added for Westside-specific URLs
+        r"/catalog/"  
     ]
     for a in soup.find_all("a", href=True):
         href = a['href']

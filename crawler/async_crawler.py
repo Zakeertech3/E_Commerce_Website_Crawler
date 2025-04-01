@@ -13,8 +13,8 @@ HEADERS = {
                    "Chrome/115.0 Safari/537.36")
 }
 
-RATE_LIMIT = Semaphore(10)  # Maximum concurrent requests
-URL_CACHE = TTLCache(maxsize=1000, ttl=3600)  # Cache URLs for 1 hour
+RATE_LIMIT = Semaphore(10)  
+URL_CACHE = TTLCache(maxsize=1000, ttl=3600)  
 
 def create_session():
     """Creates and returns an aiohttp ClientSession with custom headers."""

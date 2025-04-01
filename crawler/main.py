@@ -23,7 +23,7 @@ async def crawl_domain(domain):
             visited, product_urls = await crawl_recursive(domain, domain, session, max_depth=2)
             # Normalize discovered URLs
             product_urls = [normalize_url(url, domain) for url in product_urls]
-            product_urls = list(set(product_urls))  # Remove duplicates
+            product_urls = list(set(product_urls))  
             logging.info(f"Found {len(product_urls)} product URLs for domain: {domain}")
             return domain, product_urls
         except Exception as e:
