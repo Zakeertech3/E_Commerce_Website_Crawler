@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+aiohttp
+streamlit
+lxml
+selenium
+pytest
+cachetools==5.3.1
