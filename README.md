@@ -38,14 +38,15 @@ streamlit
 lxml
 selenium
 pytest
+requests
+cachetools==5.3.1
 ```
 
 ## 📦 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/product-url-crawler.git
-cd product-url-crawler
+https://github.com/Zakeertech3/E_Commerce_Website_Crawler.git
 
 # Install dependencies
 pip install -r requirements.txt
@@ -124,18 +125,21 @@ pytest tests/test_crawler.py
 ### Project Structure
 
 ```
-commerece/
-├── crawler/
-│   ├── async_crawler.py   # Core asynchronous crawling engine
-│   ├── main.py            # Entry point and configuration
-│   ├── parser.py          # HTML parsing and URL extraction 
-│   ├── utils.py           # Utility functions
-│   ├── streamlit_app.py   # Interactive dashboard
-├── tests/
-│   ├── test_crawler.py    # Unit and integration tests
-├── data/                  # Output directory
-├── setup.py               # Installation script
-└── README.md              # Documentation
+product-url-crawler/
+├── requirements.txt            # List of required libraries
+├── setup.py                    # (Optional) Packaging script
+├── streamlit_app.py            # Streamlit UI to run the crawler interactively
+├── crawler/                    
+│   ├── __init__.py             # Package initializer
+│   ├── main.py                 # Orchestrates crawling for multiple domains
+│   ├── async_crawler.py        # Contains asynchronous crawling and recursive logic
+│   ├── parser.py               # Extracts product URLs and internal links with enhanced patterns
+│   ├── utils.py                # Utility functions (e.g., URL normalization)
+├── tests/                      
+│   ├── __init__.py             # Tests package initializer
+│   ├── test_crawler.py         # Unit tests for parser and utils functions
+└── data/                       
+    └── output.json             # (Generated) Output mapping domains to product URLs
 ```
 
 ### Key Components
