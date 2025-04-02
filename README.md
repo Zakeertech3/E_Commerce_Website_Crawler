@@ -168,10 +168,11 @@ To contribute:
 5. Open a Pull Request
 
 Some ideas for improvements:
-- Expanding the pattern recognition for more e-commerce platforms
+
 - Adding export options for different formats (CSV, Excel, etc.)
-- Implementing a proxy rotation system for larger scale crawling
 - Enhancing the visualization with more detailed metrics
+- Add user-agent rotation to avoid detection.
+  
 
 ## 📄 License
 
