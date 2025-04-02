@@ -5,10 +5,11 @@
   <p>
     <a href="#overview">Overview</a> •
     <a href="#features">Features</a> •
+    <a href="#demo">Live Demo</a> •
     <a href="#installation">Installation</a> •
     <a href="#usage">Usage</a> •
-    <a href="#visualization">Visualization</a> •
-    <a href="#architecture">Architecture</a>
+    <a href="#architecture">Architecture</a> •
+    <a href="#contributing">Contributing</a>
   </p>
   
   ![GitHub](https://img.shields.io/badge/python-3.8+-blue.svg)
@@ -28,6 +29,22 @@ The **Product URL Crawler** is a robust, scalable, and asynchronous web crawler 
 - **🛡️ Robust Error Handling** - Gracefully manages broken links, timeouts, and rate limiting
 - **🔄 Adaptive Scaling** - Efficiently crawls from small boutiques to enterprise marketplaces
 
+## 🖼️ Demo
+
+### Live Dashboard
+**Try it now:** [E-Commerce Crawler Dashboard](https://ecommerce-crawler-dashboard.streamlit.app/)
+
+<div align="center">
+  <h3>Streamlit Interactive Dashboard</h3>
+  <img src="https://github.com/user-attachments/assets/50ce1e65-53a4-4dcc-9152-0b2935f6b49a" alt="Streamlit Dashboard" width="800"/>
+  
+  <h3>Architecture Overview</h3>
+  <img src="https://github.com/user-attachments/assets/8369a1c1-3b87-4988-b662-b0be87738ebc" alt="Architecture Diagram" width="800"/>
+  
+  <h3>Crawler Process Flow</h3>
+  <img src="https://github.com/user-attachments/assets/4b0c0464-abed-4963-a968-a8834057bc2b" alt="Crawler Process Flow" width="800"/>
+</div>
+
 ## 🛠️ Requirements
 
 ```
@@ -46,7 +63,8 @@ cachetools==5.3.1
 
 ```bash
 # Clone the repository
-https://github.com/Zakeertech3/E_Commerce_Website_Crawler.git
+git clone https://github.com/Zakeertech3/E_Commerce_Website_Crawler.git
+cd E_Commerce_Website_Crawler
 
 # Install dependencies
 pip install -r requirements.txt
@@ -59,25 +77,33 @@ python setup.py install
 
 ### Running the Crawler
 
-```bash
-# Start the crawler with default settings
-python -m crawler.main
-
-# Specify custom domains and output file
-python -m crawler.main --domains example.com,shop.example.org --output custom_results.json
-```
-
-### Visualization
-
-Launch the interactive Streamlit dashboard to monitor crawling in real-time:
+For command line:
 
 ```bash
-streamlit run crawler/streamlit_app.py
+python crawler/main.py
 ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/50ce1e65-53a4-4dcc-9152-0b2935f6b49a" alt="Streamlit Dashboard" />
-</div>
+To specify custom domains and output file:
+
+```bash
+python crawler/main.py --domains example.com,shop.example.org --output custom_results.json
+```
+
+### Launching the Dashboard
+
+For the Streamlit dashboard:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+### Testing
+
+To ensure everything is working as expected, run the tests using pytest:
+
+```bash
+pytest tests/
+```
 
 ### Supported Domains
 
@@ -104,23 +130,7 @@ Results are saved as structured JSON:
 }
 ```
 
-## 🧪 Testing
-
-Run the comprehensive test suite:
-
-```bash
-# Run all tests
-pytest tests/
-
-# Run specific test module
-pytest tests/test_crawler.py
-```
-
 ## 🏗️ Architecture
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/8369a1c1-3b87-4988-b662-b0be87738ebc" alt="Architecture Diagram" />
-</div>
 
 ### Project Structure
 
@@ -142,10 +152,6 @@ product-url-crawler/
     └── output.json             # (Generated) Output mapping domains to product URLs
 ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4b0c0464-abed-4963-a968-a8834057bc2b" alt="Crawler Process Flow" />
-</div>
-
 ### Key Components
 
 #### 1. Async Crawler Engine
@@ -159,13 +165,21 @@ Streamlit-powered interface providing live statistics, crawl depth visualization
 
 ## 👥 Contributing
 
-Contributions are welcome! Please follow these steps:
+Developers are free to use this repository and make additional changes to improve it further. We welcome contributions of all kinds!
+
+To contribute:
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Commit your changes: `git commit -m 'Add amazing feature'`
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
+
+Some ideas for improvements:
+- Expanding the pattern recognition for more e-commerce platforms
+- Adding export options for different formats (CSV, Excel, etc.)
+- Implementing a proxy rotation system for larger scale crawling
+- Enhancing the visualization with more detailed metrics
 
 ## 📄 License
 
@@ -182,7 +196,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Happy Crawling! 🚀</p>
   <p>
-    <a href="https://github.com/your-username">GitHub</a> •
+    <a href="https://github.com/Zakeertech3">GitHub</a> •
     <a href="mailto:zakeer1408@gmail.com">Contact</a>
   </p>
 </div>
