@@ -38,10 +38,8 @@ The **Product URL Crawler** is a robust, scalable, and asynchronous web crawler 
   <h3>Streamlit Interactive Dashboard</h3>
   <img src="https://github.com/user-attachments/assets/50ce1e65-53a4-4dcc-9152-0b2935f6b49a" alt="Streamlit Dashboard" width="800"/>
   
-  <h3>Architecture Overview</h3>
   <img src="https://github.com/user-attachments/assets/8369a1c1-3b87-4988-b662-b0be87738ebc" alt="Architecture Diagram" width="800"/>
   
-  <h3>Crawler Process Flow</h3>
   <img src="https://github.com/user-attachments/assets/4b0c0464-abed-4963-a968-a8834057bc2b" alt="Crawler Process Flow" width="800"/>
 </div>
 
@@ -81,12 +79,6 @@ For command line:
 
 ```bash
 python crawler/main.py
-```
-
-To specify custom domains and output file:
-
-```bash
-python crawler/main.py --domains example.com,shop.example.org --output custom_results.json
 ```
 
 ### Launching the Dashboard
@@ -165,7 +157,7 @@ Streamlit-powered interface providing live statistics, crawl depth visualization
 
 ## 👥 Contributing
 
-Developers are free to use this repository and make additional changes to improve it further. We welcome contributions of all kinds!
+Developers are free to use this repository and make additional changes to improve it further. I welcome contributions of all kinds!
 
 To contribute:
 
@@ -196,7 +188,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Happy Crawling! 🚀</p>
   <p>
-    <a href="https://github.com/Zakeertech3">GitHub</a> •
     <a href="mailto:zakeer1408@gmail.com">Contact</a>
   </p>
 </div>
