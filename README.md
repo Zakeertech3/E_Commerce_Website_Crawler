@@ -76,7 +76,7 @@ streamlit run crawler/streamlit_app.py
 ```
 
 <div align="center">
-  <img src="/api/placeholder/800/400" alt="Streamlit Dashboard" />
+  <img src="https://github.com/user-attachments/assets/50ce1e65-53a4-4dcc-9152-0b2935f6b49a" alt="Streamlit Dashboard" />
 </div>
 
 ### Supported Domains
@@ -119,7 +119,7 @@ pytest tests/test_crawler.py
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="/api/placeholder/800/450" alt="Architecture Diagram" />
+  <img src="https://github.com/user-attachments/assets/8369a1c1-3b87-4988-b662-b0be87738ebc" alt="Architecture Diagram" />
 </div>
 
 ### Project Structure
@@ -141,6 +141,10 @@ product-url-crawler/
 └── data/                       
     └── output.json             # (Generated) Output mapping domains to product URLs
 ```
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4b0c0464-abed-4963-a968-a8834057bc2b" alt="Crawler Process Flow" />
+</div>
 
 ### Key Components
 
@@ -179,6 +183,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   <p>Happy Crawling! 🚀</p>
   <p>
     <a href="https://github.com/your-username">GitHub</a> •
-    <a href="mailto:your-email@example.com">Contact</a>
+    <a href="mailto:zakeer1408@gmail.com">Contact</a>
   </p>
 </div>
